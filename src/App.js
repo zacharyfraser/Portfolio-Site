@@ -5,7 +5,7 @@ function App() {
     useEffect(() => {
         fetch("https://portfolio-site-backend.netlify.app/.netlify/functions/api")
         .then((response) => response.json())
-        .then((data) => setState(data))
+        .then((data) => setState(data.message))
         .catch((error) => console.error("Error fetching data:", error));
     }, []);
     return (
