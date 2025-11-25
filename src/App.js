@@ -1,9 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
+/* Set API URL based on build environment */
+const NETLIFY_API_BASE = process.env.REACT_APP_NETLIFY_API_URL || 'http://localhost:9000'; 
+const API_URL = `${NETLIFY_API_BASE}/.netlify/functions/api`;
+
+
 function App() {
     const [state, setState] = useState(null);
     useEffect(() => {
-        fetch("https://portfolio-site-backend.netlify.app/.netlify/functions/api")
+        fetch(API_URL)
         .then((response) => response.json())
         .then((data) => setState(data.message))
         .catch((error) => console.error("Error fetching data:", error));
