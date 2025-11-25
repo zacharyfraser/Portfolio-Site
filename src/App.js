@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 function App() {
     const [state, setState] = useState(null);
     useEffect(() => {
-        fetch("/.netlify/functions/api")
+        fetch("/.https://portfolio-site-backend.netlify.app/.netlify/functions/api/functions/api")
         .then((response) => response.json())
         .then((data) => setState(data))
         .catch((error) => console.error("Error fetching data:", error));
