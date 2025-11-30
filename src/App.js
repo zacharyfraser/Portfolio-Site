@@ -1,26 +1,31 @@
-import React from "react";
-import { useState, useEffect } from "react";
-
-/* Set API URL based on build environment */
-const NETLIFY_API_BASE = process.env.REACT_APP_NETLIFY_API_URL || 'http://localhost:9000'; 
-const API_URL = `${NETLIFY_API_BASE}/.netlify/functions/api`;
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import NotFound from './pages/NotFound';
+import Projects from './pages/Projects';
 
 function App() {
-    const [state, setState] = useState(null);
-    useEffect(() => {
-        fetch(API_URL)
-        .then((response) => response.json())
-        .then((data) => setState(data.message))
-        .catch((error) => console.error("Error fetching data:", error));
-    }, []);
-    return (
-        <div className="container text-center">
-            <h1>Welcome to My Full-Stack App </h1>
-            <p>This is a React app styled with Bootstrap 5.</p>
-            <p>{state}</p>
-        </div>
-    );
+  return (
+    // 1. Wrap your whole app in BrowserRouter
+    <BrowserRouter> 
+      <Header /> 
+      {/* 2. Define the main content area */}
+      <main>
+        {/* 3. Define the available routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+
+          {/* 4. Catch-all route for 404 Not Found */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;
