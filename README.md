@@ -1,74 +1,187 @@
-# Getting Started with Create React App
+# Portfolio Project Lab 5-7
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
-## Available Scripts
+* *Date Created*: 25 NOV 2025
+* *Last Modification Date*: 2 DEC 2025
+* *Lab URL*: <https://main.d3oerz67fqgi0s.amplifyapp.com/>
 
-In the project directory, you can run:
 
-### `npm start`
+## Authors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [Zachary Fraser](zach.fraser@dal.ca)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+<!--- Provide a list of the frameworks used to build this application, your list should include the name of the framework used, the url where the framework is available for download and what the framework was used for, see the example below --->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [React](https://reactjs.org/) - Frontend Framework
+* [Express](https://expressjs.com/) - Backend Framework
+* [Bootstrap](https://getbootstrap.com/) - CSS Framework
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Unit Testing Summary
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application was tested using Jest and React Testing Library. Tests were written for all major components to verify functionality and isolation. Key components tested include:
 
-### `npm run eject`
+App.js: Integration test ensuring routing to all pages (/, /about, /projects, /resume, * for 404). Mocking was used to prevent nested router errors.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Header.js: Unit test to verify all navigation <Link> components are present and point to the correct paths.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Footer.js: Unit test to verify the display of the copyright year and the correct structure of external links (href with https://).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Home.js/About.js/Resume.js: Verification of key structural elements, headings, and presence of profile data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Projects.js: Integration test verifying component state management by simulating a card click and asserting that the project data correctly renders inside the modal.
 
-## Learn More
+## Sources Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If in completing your lab / assignment / project you used any interpretation of someone else's code, then provide a list of where the code was implemented, how it was implemented, why it was implemented, and how it was modified. See the sections below for more details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Footer.js
 
-### Code Splitting
+*Line 25*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+Copy and paste your code on lines mentioned 
+<a href="https://www.flaticon.com/free-icons/hardware" title="hardware icons">Hardware icons created by meaicon - Flaticon</a>
+```
 
-### Analyzing the Bundle Size
+The code above was copied from [Flaticon](https://www.flaticon.com/free-icons/hardware) as shown below: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+Copy and paste the snippet of code you are referencing
+<a href="https://www.flaticon.com/free-icons/hardware" title="hardware icons">Hardware icons created by meaicon - Flaticon</a>
+```
 
-### Making a Progressive Web App
+- <!---Why---> This code was provided by Flaticon to give credit to the icon creator. The icon was used extensively throughout the site to enhance visual appeal.
+- <!---How---> The code was implemented by adding the HTML anchor tag with the appropriate href and title attributes to the Footer.js component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### src/pages/Home/Home.css
 
-### Advanced Configuration
+*Lines 7 - 16*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+``` CSS
+    .gradient-border-wrapper {
+    position: relative; 
+    width: 100%; /* Take up the full width of its Bootstrap column */
+    padding-top: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
 
-### Deployment
+    background: linear-gradient(to bottom, #55a9f3, #2787FF); /* Light blue to darker blue */
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The code above was created by adapting the code from [CSS Tricks:  Perfect Square] (https://css-tricks.com/forums/topic/making-a-responsive-css-square/) as shown below:
 
-### `npm run build` fails to minify
+``` CSS
+.box {
+    float: left;
+    width: 50%;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+.box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+```
 
-## Project Link
+<!---How---> The code was implemented by using the padding-top: 100% trick on a block element to force its height to match its width, thus maintaining a perfect square aspect ratio regardless of screen size.
 
-https://main.d3oerz67fqgi0s.amplifyapp.com/
+<!---Why---> This method was used to ensure the image grid cards remained perfectly square and responsive, a requirement not easily met using fixed pixel dimensions or simpler CSS methods.
+
+## Artificial Intelligence Tools Used
+
+If in completing your lab / assignment / project you used any Artificial Intelligence Tools or Plugins, then provide a list of the tools or plugins used, the prompt used, the code generated by the AI, where the code was implemented, how it was implemented, why it was implemented, and how it was modified. See the sections below for more details.
+
+* [Gemini](https://gemini.google.com/) - Gemini - Used to generate code snippets and assist with debugging code and the toolchain. I also used Gemini to generate concept images of what I wanted the portfolio site to look like.
+* [ChatGPT](https://chat.openai.com/) - ChatGPT - Used to explain concepts regarding React and JavaScript, and frontend and backend development.
+
+
+### Prompt Used on *Gemini*
+
+``` txt
+Copy and paste the prompt used 
+How do I structure routing in a React application using React Router to include a header and footer that persist across all pages, with routes for Home, About, and Projects pages?
+```
+
+The code prompt above was used to generate the code shown below: 
+
+``` JS
+Copy and paste the entirety of the code generated by the AI Tool listed above.
+// In App.js
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Header /> 
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
+  );
+}
+```
+
+#### App.js
+*All Lines*
+
+``` JS
+Copy and paste your code on the lines mentioned
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import NotFound from './pages/NotFound/NotFound';
+import Projects from './pages/Projects/Projects';
+import Resume from './pages/Resume/Resume';
+
+function App() {
+  return (
+    /* Wrap your whole app in BrowserRouter */
+    <BrowserRouter> 
+      <div className="d-flex flex-column min-vh-100">
+        <Header /> 
+        {/* Define the main content area */}
+          {/* Define the available routes */}
+          <main className="flex-grow-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/resume" element={<Resume />} />
+
+              {/* Catch-all route for 404 Not Found */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+    
+  );
+}
+
+export default App;
+```
+
+- <!---How---> The code was implemented by wrapping the entire application in a <BrowserRouter> component, placing the <Header> and <Footer> components outside the <Routes> to ensure they persist across all pages, and defining individual <Route> components for each page within the <Routes>.
+- <!---Why---> [NAME](link)'s Code was used because it provided a clear and concise structure for implementing routing in a React application, ensuring persistent header and footer components.
+- <!---How---> [NAME](link)'s Code was modified by adding additional routes for Resume and NotFound pages, and incorporating Bootstrap classes for layout styling.
