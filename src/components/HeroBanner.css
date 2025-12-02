@@ -1,0 +1,31 @@
+.hero-banner-container {
+    /* 1. Make it span the full width */
+    width: 100%;
+    
+    /* 2. Define height and Flexbox for centering content */
+    height: 350px; /* Adjust height as needed */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+    
+    /* 3. Background styling */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1); /* 10% black overlay */
+}
+
+/* Styling for the text */
+.hero-content-wrapper {
+    /* Center the block of text within the container */
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3rem; /* Large font size */
+    font-weight: 600;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Helps text stand out */
+}

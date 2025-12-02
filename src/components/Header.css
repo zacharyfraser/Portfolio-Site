@@ -1,0 +1,7 @@
+.text-gradient {
+    background: linear-gradient(to bottom, #55a9f3, #2787FF); /* Light blue to darker blue */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}

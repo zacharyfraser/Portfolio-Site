@@ -1,0 +1,37 @@
+/* src/pages/Home.css */
+
+/*
+  Wrapper for the gradient border
+  This div will have the gradient background and act as the "border"
+*/
+.gradient-border-wrapper {
+    position: relative; 
+    width: 100%; /* Take up the full width of its Bootstrap column */
+    padding-top: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: linear-gradient(to bottom, #55a9f3, #2787FF); /* Light blue to darker blue */
+}
+
+/*
+  Image Styling
+*/
+.gradient-border-wrapper img {
+    position: absolute;
+    top: 0px;   
+    left: 0px;  
+    width: 100%; 
+    height: 100%; 
+}
+
+/*
+  Intro Text Styling
+*/
+.intro-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 450;
+}
