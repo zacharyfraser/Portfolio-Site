@@ -5,6 +5,7 @@
 * *Date Created*: 25 NOV 2025
 * *Last Modification Date*: 2 DEC 2025
 * *Lab URL*: <https://main.d3oerz67fqgi0s.amplifyapp.com/>
+* *Gitlab URL*: <https://git.cs.dal.ca/zfraser/csci-3172>
 
 
 ## Authors
