@@ -2,10 +2,10 @@ import React from 'react';
 import './Home.css';
 
 /* Image Imports */
-import WindboundPCB from '../assets/Windbound_PCB.png';
-import MCURouting from '../assets/MCU_Routing.png';
-import DecodeLogic from '../assets/Decode_Logic.png';
-import HeroBanner from '../components/HeroBanner';
+import WindboundPCB from '../../assets/Windbound_PCB.png';
+import MCURouting from '../../assets/MCU_Routing.png';
+import DecodeLogic from '../../assets/Decode_Logic.png';
+import HeroBanner from '../../components/HeroBanner/HeroBanner';
 
 function Home() {
   return (

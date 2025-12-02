@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Projects.css';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 const projectData = [
   
@@ -8,7 +8,7 @@ const projectData = [
     id: 1,
     title: "Brushless Motor Driver",
     category: "Hardware",
-    image: require('../assets/projects/Brushless_Controller.jpg'),
+    image: require('../../assets/projects/Brushless_Controller.jpg'),
     description: "Designed a custom PCB for closed-loop position control of a linear rail controlled by \
     a brushless DC motor. The board uses an STM32 microcontroller to implement a PID control loop, \
     reading position feedback from a magnetic linear encoder, motor pole transitions from hall sensors, \
@@ -21,7 +21,7 @@ const projectData = [
     id: 2,
     title: "Autonomous Sailboat PCB",
     category: "Hardware/Firmware",
-    image: require('../assets/projects/Windbound_PCB.png'),
+    image: require('../../assets/projects/Windbound_PCB.png'),
     description: "Designed a custom PCB for Dalhousie University's Autonomous Sailboat team. \
     This board forwards sensor data about wind speed, GPS coordinates, and boat orientation to \
     a Raspberry Pi which controls the sailboat's navigation. The PCB then receives mast and rudder\
@@ -34,7 +34,7 @@ const projectData = [
     id: 3,
     title: "UART Message Hub",
     category: "Hardware/Firmware",
-    image: require('../assets/projects/UART_Forwarder_Top.png'),
+    image: require('../../assets/projects/UART_Forwarder_Top.png'),
     description: "Designed a small PCB to route messages from multiple sensors to a single UART interface. \
     This board uses an STM32 microcontroller to read data from up to four UART sensors and forwards \
     the data to a host microcontroller over a single UART interface. The board uses a simple \

@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeroBanner.css';
 
-import circuitBackground from '../assets/Circuit_Background.png'; 
+import circuitBackground from '../../assets/Circuit_Background.png'; 
 
 function HeroBanner() {
   const heroStyle = {
@@ -12,7 +12,9 @@ function HeroBanner() {
   };
 
   return (
-    <div className="hero-banner-container" style={heroStyle}>
+    <div className="hero-banner-container" 
+    data-testid="hero-banner-container"
+    style={heroStyle}>
       
       <div className="container hero-content-wrapper">
 
