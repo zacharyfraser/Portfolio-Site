@@ -12,8 +12,8 @@ const projectData = [
     description: "Designed a custom PCB for closed-loop position control of a linear rail controlled by \
     a brushless DC motor. The board uses an STM32 microcontroller to implement a PID control loop, \
     reading position feedback from a magnetic linear encoder, motor pole transitions from hall sensors, \
-    and driving the motor through a three-phase BLDC driver. The board communicates over UART to a host computer. \
-    The host computer runs a custom Python GUI to control the motor's position in real-time.",
+    and driving the motor through a three-phase BLDC driver. The board communicates over a VCOM port to a host computer. \
+    The host computer runs a custom Python GUI to configure motion trajectories in real time.",
     tech: ["Altium Designer", "STM32", "Python"],
     link: "#" /* Replace # with project link when available */
   },
@@ -32,11 +32,16 @@ const projectData = [
   },
   {
     id: 3,
-    title: "Robotics Arm",
-    category: "Robotics",
-    image: "https://placehold.co/600x600/dc3545/FFF?text=Robot",
-    description: "programmed a 6-axis robotic arm for automated assembly tasks.",
-    tech: ["Python", "ROS", "3D Printing"],
+    title: "UART Message Hub",
+    category: "Hardware/Firmware",
+    image: require('../assets/projects/UART_Forwarder_Top.png'),
+    description: "Designed a small PCB to route messages from multiple sensors to a single UART interface. \
+    This board uses an STM32 microcontroller to read data from up to four UART sensors and forwards \
+    the data to a host microcontroller over a single UART interface. The board uses a simple \
+    message protocol to identify the source of each message, allowing the host to easily parse \
+    and process the incoming data. This board was used with a previous version of the Autonomous Sailboat project, \
+    where the main microcontroller had limited UART interfaces available.",
+    tech: ["EasyEDA", "C", "STM32"],
     link: "#" /* Replace # with project link when available */
   },
   /* Add more projects here */

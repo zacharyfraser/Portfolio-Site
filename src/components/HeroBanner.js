@@ -17,7 +17,7 @@ function HeroBanner() {
       <div className="container hero-content-wrapper">
 
         <h1 className="hero-title text-white">
-          ZACHARY FRASER | Embedded Systems Portfolio
+          ZACHARY FRASER | Embedded Systems
         </h1>
       </div>
     </div>
